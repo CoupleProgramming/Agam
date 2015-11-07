@@ -30,7 +30,7 @@ public class Font {
 		java.awt.Font fallbackFont = new java.awt.Font("SansSerif", java.awt.Font.BOLD, systemFontHeight);
 		java.awt.Font systemFont = null;
 		try {
-			InputStream fontStream = Font.class.getResourceAsStream("/assets/assets/fonts/ubuntu-font-family-0.80/Ubuntu-B.ttf");
+			InputStream fontStream = Font.class.getResourceAsStream("/assets/fonts/ubuntu-font-family-0.80/Ubuntu-B.ttf");
 			systemFont = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, fontStream);
 			systemFont = systemFont.deriveFont((float)systemFontHeight);
 		} catch (FontFormatException e) {
@@ -53,7 +53,7 @@ public class Font {
 		};
 		FontCharacterFactory characterFactory;
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, blueGradient, shadowColor, heightOffset);
-		FONT_BLUE = new Font(Game.instance.canvas.cut("/assets/assets/images/font_blue.png", 8, 8), letters, glyphHeight,spacing, characterFactory);
+		FONT_BLUE = new Font(Game.instance.canvas.cut("/assets/images/font_blue.png", 8, 8), letters, glyphHeight,spacing, characterFactory);
 
 		Color[] goldGradient = {
 				new Color(241, 216, 145),
@@ -64,7 +64,7 @@ public class Font {
 				new Color(234, 221, 91),
 				new Color(240, 195, 137)};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, goldGradient, shadowColor, heightOffset);
-		FONT_GOLD = new Font(Game.instance.canvas.cut("/assets/assets/images/font_gold.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
+		FONT_GOLD = new Font(Game.instance.canvas.cut("/assets/images/font_gold.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
 
 		Color[] grayGradient = {
 				new Color(0xb2b2b2),
@@ -76,7 +76,7 @@ public class Font {
 				new Color(0xaeaeae)
 		};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, grayGradient, shadowColor, heightOffset);
-		FONT_GRAY = new Font(Game.instance.canvas.cut("/assets/assets/images/font_gray.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
+		FONT_GRAY = new Font(Game.instance.canvas.cut("/assets/images/font_gray.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
 
 		Color[] redGradient = {
 				new Color(0xff657b),
@@ -88,7 +88,7 @@ public class Font {
 				new Color(0xff5d8f)
 		};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, redGradient, shadowColor, heightOffset);
-		FONT_RED  = new Font(Game.instance.canvas.cut("/assets/assets/images/font_red.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
+		FONT_RED  = new Font(Game.instance.canvas.cut("/assets/images/font_red.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
 
 		letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ    " + "abcdefghijklmnopqrstuvwxyz    " + "0123456789-.!?/%$\\=*+,;:()&#\"'";
 
@@ -99,7 +99,7 @@ public class Font {
 
 		fallbackFont = new java.awt.Font("SansSerif", java.awt.Font.PLAIN, systemFontHeight);
 		try {
-		InputStream fontStream = Font.class.getResourceAsStream("/assets/assets/fonts/ubuntu-font-family-0.80/Ubuntu-L.ttf");
+		InputStream fontStream = Font.class.getResourceAsStream("/assets/fonts/ubuntu-font-family-0.80/Ubuntu-L.ttf");
 			systemFont = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, fontStream);
 			systemFont = systemFont.deriveFont((float)systemFontHeight);
 		} catch (FontFormatException e) {
@@ -113,7 +113,7 @@ public class Font {
 		shadowColor = new Color(0, 0, 0, 0);
 		Color[] smallBlackGradient = {new Color(0x000000)};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, smallBlackGradient, shadowColor, heightOffset);
-		FONT_BLACK_SMALL = new Font(Game.instance.canvas.cut("/assets/assets/images/font_small_black.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
+		FONT_BLACK_SMALL = new Font(Game.instance.canvas.cut("/assets/images/font_small_black.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
 
 		Color[] smallGoldGradient = {
 				new Color(0xf0c389),
@@ -122,11 +122,11 @@ public class Font {
 				new Color(0xfbf3df),
 				new Color(0xf1d891)};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, smallGoldGradient, shadowColor, heightOffset);
-		FONT_GOLD_SMALL  = new Font(Game.instance.canvas.cut("/assets/assets/images/font_small_gold.png", 8, 8),  letters, glyphHeight, spacing, characterFactory);
+		FONT_GOLD_SMALL  = new Font(Game.instance.canvas.cut("/assets/images/font_small_gold.png", 8, 8),  letters, glyphHeight, spacing, characterFactory);
 
 		Color[] smallWhiteGradient = {new Color(0xffffff)};
 		characterFactory = new FontCharacterFactory(systemFont, fallbackFont, smallWhiteGradient, shadowColor, heightOffset);
-		FONT_WHITE_SMALL = new Font(Game.instance.canvas.cut("/assets/assets/images/font_small_white.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
+		FONT_WHITE_SMALL = new Font(Game.instance.canvas.cut("/assets/images/font_small_white.png", 8, 8), letters, glyphHeight, spacing, characterFactory);
 
 		setDefaultFont(FONT_GOLD);
 	}
