@@ -22,6 +22,7 @@ public class Agam extends Game {
     @Override
     public void render(float delta, DrawingCanvas canvas) {
         canvas.fill(0, 0, canvas.getWidth()/2, canvas.getHeight(), 0xFFFFFFFF);
+        canvas.rectangle(mouse.getX(), mouse.getY(), 10, 10, 0xFFFF0000);
         font.draw(canvas, "Test string", mouse.getX(), mouse.getY());
     }
 
